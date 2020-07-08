@@ -1,0 +1,95 @@
+/* General styles */
+
+/* 
+  Font size calculated using formula:
+    
+  minimum size + (maximum size - minimum size) x [(100vw - minimum viewport) / (maximum viewpoer - minimum viewport)]
+*/
+
+p, label {
+    font-size: calc(16px + (26 - 16) * ((100vw - 768px) / (1600 - 768)));
+}
+
+ul {
+    list-style: upper-roman;
+}
+
+li { 
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    font-size: calc(18px + (28 - 18) * ((100vw - 768px) / (1600 - 768)));
+}
+
+body {
+    background-color: rgb(223, 223, 223);
+}
+
+h4, h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    font-size: calc(18px + (28 - 18) * ((100vw - 768px) / (1600 - 768)));
+}
+
+hr {
+    outline: darkgray;
+    background-color: darkgray;
+    height: 5px;
+}
+
+.logo {
+    height: calc(50px + 10vw); 
+    width: calc(50px + 10vw);
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+a.navigationLink {
+    color: darkorange;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Media hooks? */
+
+@media screen and (max-width: 768px) { 
+    p, label { 
+        font-size: 16px; 
+    } 
+
+    li {
+        font-size: 18px;
+    }
+
+    h4, h1 {
+        font-size: 18px;
+    }
+
+}
+@media screen and (min-width: 1600px) {
+     p, label { 
+         font-size: 26px;
+     } 
+
+     li { 
+        font-size: 28px;
+    } 
+
+    h4, h1 { 
+        font-size: 28px;
+    } 
+}
+
+/* Palette specifics */
+
+div[id="palette"] h4 {
+    margin-bottom: 0px;
+}
+
+div[id="palette"] ul {
+    margin-top: 10px;
+}
